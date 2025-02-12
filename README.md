@@ -10,6 +10,8 @@ Simply add the definition of vm and jobs in the database and launch script (shou
 
 A confirmation email with time, transfer rate, size, type of backup for every image is sent after operation ended.
 
+![Immagine 2025-02-12 155202](https://github.com/user-attachments/assets/f34f4fdb-d8e8-4274-aa51-0538478085a2)
+
 
 ## How it works
 The main script scans for all JOBs defined and execute them.
