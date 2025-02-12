@@ -47,13 +47,24 @@ Try to start the job runing the *bkexec.php* and monitor it.
 
 If everything is ok you can add it to cron for daily execution.
 
-### Retention
+## Retention
 
 After the retention threshold is reached (max number of full backup performed), the older backup folders are deleted.
+Simply launch *./bkretention.php* or better cron it daily to automate retention.
 
 If a hardened (immutable) backup is set on the storage side (strongly suggested!!!!) setup immutability in synch with the above retention thresold otherwise folder cleanup will fail.
 
+## Listing available restore points
 
+Simply launch *./bklist.php* script with the name of the VM as unique arg. A list of available restore points will be displayed
+
+## Restore
+
+Simply launch *./bkrest.php* with the following args (supplied by the above bklist command):  BACKUP-JOB IMAGE RESTPOINT RESTORED-NAME.
+The RESTORED-NAME is the name of the NEW image that will be created on the CEPH cluster
+
+## Trimming old snapshots
+Every backup action perform a snapshot. It is adiviceable to delete old unused snapshots frome the CEPH storage. simply launch *./bktrimsnap.php* to delete unused snapshot. The max number of snapshot in the field *max-snaps* of teh record of your backup set will be preserved.
 
 
 
