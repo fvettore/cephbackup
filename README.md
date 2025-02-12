@@ -61,6 +61,7 @@ If a hardened (immutable) backup is set on the storage side (strongly suggested!
 ## Listing available restore points
 
 Simply launch *./bklist.php* script with the name of the VM as unique arg. A list of available restore points will be displayed
+![Immagine 2025-02-12 155453](https://github.com/user-attachments/assets/065cf3eb-0868-463c-9271-6020800f4c7d)
 
 ## Restore
 
