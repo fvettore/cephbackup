@@ -31,7 +31,8 @@ When backup ends, a detailed report is sent by email.
 ## Prerequisites
 
 Backup target must be mounted before backup starts.
-You can RBD the CEPH cluster from the backup machine (import keyrings and so on...)
+
+You must be able to RBD the CEPH cluster from the backup machine (import keyrings and so on...)
 
 ## Getting started
 Create your MySQL database. SQL is available in the SQL folder for creating tables in your newly created DB.
