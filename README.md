@@ -67,7 +67,7 @@ Simply launch *./bkrest.php* with the following args (supplied by the above bkli
 The RESTORED-NAME is the name of the NEW image that will be created on the CEPH cluster
 
 ## Trimming old snapshots
-Every backup action perform a snapshot. It is adiviceable to delete old unused snapshots frome the CEPH storage. simply launch *./bktrimsnap.php* to delete unused snapshot. The max number of snapshot in the field *max-snaps* of teh record of your backup set will be preserved.
+Every backup action perform a snapshot. It is adiviceable to delete old unused snapshots frome the CEPH storage. simply launch *./bktrimsnap.php* to delete unused snapshot. The max number of snapshot in the field *max-snaps* of the record of your backup set will be preserved.
 
 
 
