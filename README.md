@@ -33,6 +33,9 @@ After the threshold is reached the backup is rotated and a new full instance is 
 When backup ends, a detailed report is sent by email.
 
 ## Prerequisites
+PHP
+
+Mysql/MariaDB
 
 Backup target must be mounted before backup starts.
 
