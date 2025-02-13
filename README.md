@@ -37,7 +37,7 @@ PHP
 
 Mysql/MariaDB
 
-Backup target must be mounted before backup starts.
+A bakup target (folder). Backup target must be mounted before backup starts.
 
 The backup machine must be able to access to the pool on the CEPH cluster via *rbd* command (import keyrings and so on...)
 
