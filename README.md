@@ -37,7 +37,7 @@ Backup target must be mounted before backup starts.
 You must be able to RBD the CEPH cluster from the backup machine (import keyrings and so on...)
 
 ## Getting started
-Create your MySQL database. SQL is available in the SQL folder for creating tables in your newly created DB.
+Create your MySQL database. SQL  is available in the SQL folder for creating tables in your newly created DB.
 
 Edit *config.php* accordingly.
 
@@ -68,6 +68,13 @@ Simply launch *./bklist.php* script with the name of the VM as unique arg. A lis
 Simply launch *./bkrest.php* with the following args (supplied by the above bklist command):  BACKUP-JOB IMAGE RESTPOINT RESTORED-NAME.
 
 The RESTORED-NAME is the name of the NEW image that will be created on the CEPH cluster
+
+Here an example of a restore process. First of all I ask for a list of the images and related restore points available for the VM *ROCKY9test*.
+I choose an image *ROCKY9_01* and a restore point *000001-000003* and launch restore, giving a target image *ROCKY9test_rest*.
+The process starts, the image is created and all the diff ar added to the image. At the end we get the restored image  rbdpool01/ROCKY9test_rest and I can attach it as a storage to a running VM or create e new VM assigning it as storage.
+
+![Immagine 2025-02-13 083209](https://github.com/user-attachments/assets/7d61b792-b6d8-4b62-bab1-289e84b8829a)
+
 
 ## Trimming old snapshots
 Every backup action perform a snapshot. It is adiviceable to delete old unused snapshots frome the CEPH storage. simply launch *./bktrimsnap.php* to delete unused snapshot. The max number of snapshot in the field *max-snaps* of the record of your backup set will be preserved.
