@@ -4,7 +4,7 @@ Every VM can have multiple disk images.
 
 VM definition is not included. It is your care to save it (you can easilly schedule the backup of XML VM definition with the command *virsh dumpxml* on the node where VM is running).
 
-Simple crash consistent backup is created. If you wish application consistent backup you should add more complexity for example freezing an saving VRAM of your VM before te snapshot.
+Simple crash consistent backup is created. If you wish application consistent backup you should add more complexity for example freezing an saving VRAM of your VM before the snapshot.
 
 Create backup JOBs with thin provisioned full and incremental or differential backups of your kvm/qemu virtual machines
 
