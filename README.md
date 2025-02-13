@@ -2,7 +2,7 @@
 A very simple suite to perform full/inc backups of VM storage on CEPH and restore. Designed to support a KVM cluster vith CEPH storage.
 Every VM can have multiple disk images.
 
-VM definition is not includes. It is your care to save it (you can easilly schedule the backup of XML VM definition with the command *virsh dumpxml*).
+VM definition is not included. It is your care to save it (you can easilly schedule the backup of XML VM definition with the command *virsh dumpxml*).
 
 Simple crash consistent backup is created. If you wish application consistent backup you should add more complexity for example freezing an saving VRAM of your VM before te snapshot.
 
