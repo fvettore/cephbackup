@@ -18,7 +18,7 @@ A confirmation email with time, transfer rate, size, type of backup for every im
 ## How it works
 The main script scans for all JOBs defined in DB and execute them.
 
-It checks for day scheduled and week scheduled an decide if the job is to be skipped today. 
+It checks for day scheduled and week scheduled an decides if the job is to be skipped today. 
 
 If the backup job is not to be skipped, if a prevoius instance is still running, the JOB terminate with email notification.
 
