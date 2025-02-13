@@ -2,7 +2,7 @@
 A very simple suite to perform full/inc backups of VM on CEPH and restore. Designed to support a KVM cluster vith CEPH storage.
 Every VM can have multiple disk images.
 
-Simple crash consistant backup is created. If you wish application consistant backup you should add more complexity for example freezing an saving VRAM of your VM before te snapshot.
+Simple crash consistent backup is created. If you wish application consistent backup you should add more complexity for example freezing an saving VRAM of your VM before te snapshot.
 
 Create backup JOBs with thin provisioned full and incremental or differential backups of your kvm/qemu virtual machines
 
