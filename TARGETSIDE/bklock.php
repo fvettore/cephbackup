@@ -1,9 +1,9 @@
 #!/usr/bin/php
 <?php
 /**************************************************************************
- *	bklock.php
- *	© 2025 by Fabrizio Vettore - fabrizio(at)vettore.org
- *	V 0.1
+ *      bklock.php
+ *      © 2025 by Fabrizio Vettore - fabrizio(at)vettore.org
+ *      V 0.1
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
@@ -24,20 +24,20 @@
  * a tutti i file del backup
  * lascia la possibilità di scrivere nelle
  * cartelle
- 
+
  * da mettere in cron
  */
 
 $bktime = file_get_contents(__DIR__ . "/lastbk.txt");
 $locktime = file_get_contents(__DIR__ . "/lastlock.txt");
-if ($bktime > $locktime) recurseFolder(__DIR__); {
-    //toglie flag dalla cartella correntels
-    shell_exec("chattr -i *");
-    $endtime = date("Y-m-d H:i:s");
+if ($bktime > $locktime) recurseFolder(__DIR__);
 
-    file_put_contents(__DIR__ . "/lastlock.txt", $endtime);
-}
-//recurse folder and appli +i flag to all files
+//toglie flag dai file che devono essere modificabili
+shell_exec("chattr -i ".__DIR__." *.txt");
+$endtime = date("Y-m-d H:i:s");
+file_put_contents(__DIR__ . "/lastlock.txt", $endtime);
+
+//recurse folder and apply +i flag to all files
 function recurseFolder($path)
 {
     $d = dir($path);
