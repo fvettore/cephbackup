@@ -65,6 +65,8 @@ Simply launch *./bkretention.php* or better cron it daily to automate retention.
 
 If a hardened (immutable) backup is set on the storage side (strongly suggested!!!!) setup immutability in synch with the above retention thresold otherwise folder cleanup will fail.
 
+Otherwise you can setup IMMUTABLE backup with is own retention on your target with the scripts in the TARGETSIDE folder.
+
 ## Listing available restore points
 
 Simply launch *./bklist.php* script with the name of the VM as unique arg. A list of available restore points will be displayed
