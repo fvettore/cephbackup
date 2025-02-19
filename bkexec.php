@@ -3,7 +3,7 @@
 /**************************************************************************
  *	bkexec
  *	© 2025 by Fabrizio Vettore - fabrizio(at)vettore.org
- *	V 0.1
+ *	V 0.2
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
@@ -263,6 +263,9 @@ while ($l = $r->fetch_array()) {
             $message .= "</table>";
             emailnotify("[$report] CEPH Backup $job_name ($numvms objects)", $message);
             unset($bkres);
+            //update time mark to be used target side for backup immutable lock
+            $endtime = date("Y-m-d H:i:s");
+            file_put_contents("$job_path/$job_name/lastbk.txt", $endtime);            
         } else { //backup aboreted with error
             $message = "<h3>$ERROR</h3>";
             emailnotify("[$report] CEPH Backup $job_name (ALL objects)", $message);
