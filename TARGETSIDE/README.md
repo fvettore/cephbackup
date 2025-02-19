@@ -3,7 +3,7 @@
 Install on the target side in the backup folder.
 
 ## LOCK BACKUP
-Simply installing the bklock.php script and executing in the folder, immutable flag is added to ALL backup files. This way nothing can be modified/deleted from any client on the network.
+Simply installing the bklock.php script and executing into the folder, immutable flag is added to ALL backup files. This way nothing can be modified/deleted from any client on the network.
 
 The script check for the last backup date-time and perform lock only if the backup is more recent than last lock.
 
