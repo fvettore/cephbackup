@@ -12,4 +12,4 @@ Add it to cron hourlu (or more often)
 ## RETENTION
 Execute bkretention.php to delete old backup sets. The number of FULL to be retained is read from config.php.
 The script remove immutable flag before deleting.
-If some deletions performed a detailed email is sent to the addresses in config.php
+If some deletion is performed a detailed email is sent to the addresses in config.php
