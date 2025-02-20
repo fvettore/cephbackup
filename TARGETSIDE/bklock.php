@@ -33,7 +33,7 @@ $locktime = file_get_contents(__DIR__ . "/lastlock.txt");
 if ($bktime > $locktime) recurseFolder(__DIR__);
 
 //toglie flag dai file che devono essere modificabili
-shell_exec("chattr -i ".__DIR__." *.txt");
+shell_exec("chattr -i ".__DIR__."/*.txt");
 $endtime = date("Y-m-d H:i:s");
 file_put_contents(__DIR__ . "/lastlock.txt", $endtime);
 
