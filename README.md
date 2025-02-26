@@ -85,7 +85,7 @@ The process starts, the image is created and all the diff ar added to the image.
 ![Immagine 2025-02-13 083209](https://github.com/user-attachments/assets/7d61b792-b6d8-4b62-bab1-289e84b8829a)
 
 ## Trimming old snapshots
-Every backup action perform a snapshot. It is adiviceable to delete old unused snapshots frome the CEPH storage. simply execute *./bktrimsnap.php* to delete unused snapshot. The max number of snapshot in the field *max-snaps* of the record of your backup set in the tabel *backup_jobs* will be preserved.
+Every backup action perform a snapshot. It is adiviceable to delete old unused snapshots frome the CEPH storage. simply execute *./bktrimsnap.php* to delete unused snapshot. The max number of snapshot in the field *max-snaps* of the record of your backup set in the table *backup_jobs* will be preserved.
 
 
 
